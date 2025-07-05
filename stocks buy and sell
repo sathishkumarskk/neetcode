@@ -1,0 +1,46 @@
+class Solution(object):
+    def maxProfit(self, prices):
+     n=input("enter :").split()
+     l=[int(i) for i in n]
+     min=l[0]
+     max=0
+     new=0
+     new1=0
+     index=0
+     #minimum
+     for i in range(0,len(l)):
+         for j in range(0,len(l)):
+           if l[i]==l[j]:
+               if i==j:
+                continue
+               else:
+                continue
+           elif l[j]<l[i]:
+               new=l[j]
+               if new<min:
+                   min=new
+                   index=j
+               else:
+                   pass
+#maximum 
+         for i in range(index,len(l)):
+             for j in range(index,len(l)):
+                 if l[i]==l[j]:
+                     if i==j:
+                      continue
+                     else:
+                      continue
+                 elif l[j]>l[i]:
+                      new1=l[j]
+                      if new1>max:
+                         max=new1
+                      else:
+                         pass
+     profit=max-min
+     if profit<0:
+         print(0)
+     else:
+         print(profit)
+          
+        
+    
