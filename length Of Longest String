@@ -1,0 +1,11 @@
+class Solution(object):
+    def lengthOfLongestSubstring(self, s):
+     self.s=string
+     self.l=[]
+     for i in range(0,len(self.s)):
+        self.l.append(self.s[i])
+     self.l1=set(self.l)    
+     print(len(self.l1))
+string=input('enter string :')
+object=Solution()
+object.lengthOfLongestSubstring(string)    
