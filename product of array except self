@@ -1,0 +1,35 @@
+class Solution(object):
+    def productExceptSelf(self, nums):
+        self.n=nums
+        self.l=[int(i) for i in self.n]
+        self.total=1
+        self.totall=1
+        self.newlist=[]
+        self.zero_count=0
+        for i in self.l:
+            if i==0:
+                self.zero_count+=1
+            else:
+                continue
+        for p in self.l:
+            if p==0:
+                continue
+            else:
+                self.mult=p*self.totall
+                self.totall=self.mult
+        for i in self.l:
+            self.mul=i*self.total
+            self.total=self.mul
+        for i in self.l:
+            if self.zero_count>1:
+               self.newlist.append(0) 
+            else:   
+               if i==0:
+                   self.newlist.append(self.totall) 
+               else:   
+                   self.result=int(self.total/i)
+                   self.newlist.append(self.result)
+        print(self.newlist) 
+nums=input("enter: ").split()  
+object=Solution()
+object.productExceptSelf(nums)
