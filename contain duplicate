@@ -1,0 +1,18 @@
+class Solution(object):
+    def containsDuplicate(self, nums):
+        self.n=nums
+        self.l=[int(i) for i in self.n]
+        self.found=0
+        for i in self.n:
+            for j in self.n:
+                if i==j:
+                    self.found+=1
+                else:
+                    self.found+=0
+        if self.found>len(self.l):
+            print("true")
+        else:
+            print("false")
+nums=input("enter list:").split()    
+object=Solution()
+object.containsDuplicate(nums)
