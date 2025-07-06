@@ -1,0 +1,26 @@
+class Solution(object):
+    def isAnagram(self, s, t):
+        self.s1=s
+        self.s2=t
+    def str(self):
+      self.found=0  
+      self.list1=list(self.s1)
+      self.len1=len(self.list1)
+      self.list2=list(self.s2)
+      self.len2=len(self.list2)
+      for i in range(0,self.len1):
+          for j in range(0,self.len2):
+             if self.list1[i]==self.list2[j]:
+                 self.found+=1
+                 break
+             else:
+                 self.found+=0
+      if self.found>=self.len1:
+          print("true")
+      else:
+          print("false")            
+s=input()  
+t=input()
+ob= Solution()
+ob.isAnagram(s,t)
+ob.str()
