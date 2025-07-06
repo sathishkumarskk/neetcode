@@ -1,0 +1,12 @@
+class Solution(object):
+    def findMin(self, nums):
+        self.n=nums
+        self.l=[int(i) for i in self.n]
+        self.min=self.l[0]
+        for i in self.l:
+            if i<self.min:
+                self.min=i
+        print("minimum :",self.min)        
+nums=input("enter :").split()   
+object=Solution()
+object.findMin(nums)
