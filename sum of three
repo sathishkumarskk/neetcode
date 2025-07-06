@@ -1,0 +1,23 @@
+class summ:
+    def fun1(self,num):
+     self.n=num
+     self.l=[int (i) for i in self.n]
+     self.le=len(self.l)
+     self.lis=[]
+    def fun2(self):
+     for i in range(0,self.le):
+         for j in range(0,self.le):
+             for k in range(0,self.le):
+                 if ((self.l[i]+self.l[j]+self.l[k])==0):
+                      self.lis.append([self.l[i],self.l[j],self.l[k]])
+                      break
+                 elif self.l[j]==self.l[j]==self.l[j]:
+                      break
+                 else:
+                      break
+     self.li=list(dict.fromkeys(tuple(i) for i in self.lis))
+     print([list(i) for i in self.lis]) 
+num=input("enter :").split()
+ob=summ()
+ob.fun1(num)
+ob.fun2()
