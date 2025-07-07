@@ -1,0 +1,14 @@
+class Solution(object):
+    def getSum(self, a, b):
+     n1=a
+     n2=b
+     l=[]
+     for i in range(0,n1):
+         l.append(i)
+     for j in range(0,n2):
+         l.append(j)
+     print(len(l)) 
+a=int(input("enter num 1 :"))
+b=int(input("enter num 2 :"))
+object=Solution()
+object.getSum(a,b)    
