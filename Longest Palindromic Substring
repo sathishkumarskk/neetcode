@@ -1,0 +1,13 @@
+class Solution(object):
+    def longestPalindrome(self, s):
+        self.n=s
+        self.r=self.n[::-1]
+        self.list=[]
+        for i in range(0,len(self.n)):
+            if self.n[i]==self.r[i]:
+               self.list.append(self.n[i])
+        self.s="".join(self.list)
+        print(self.s)
+s=input("enter string :")
+object=Solution()
+object.longestPalindrome(s)
