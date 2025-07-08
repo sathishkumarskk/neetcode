@@ -1,0 +1,33 @@
+class Solution(object):
+    def isValid(self,s):
+        self.n=s
+        self.l=len(self.n)
+        self.h=int(len(self.n)/2)
+        self.found=0
+        for i in range(0,len(self.n)):
+            for j in range(0,len(self.n)):
+             if i==j:
+                 continue
+             else:
+                 if self.n[i]=="{":
+                  if self.n[j]=="}":
+                      if abs(i-j)!=2:
+                       self.found+=1
+                 if self.n[i]=="[":
+                  if self.n[j]=="]":
+                      if abs(i-j)!=2:
+                       self.found+=1
+                 if self.n[i]=="(":
+                  if self.n[j]==")":
+                      if abs(i-j)!=2:
+                       self.found+=1  
+        if self.l%2==0:
+            if self.found>=self.h:
+             print("true")
+            else:
+             print("false")    
+        else:
+            print("false")
+s=input("enter :")      
+object=Solution()
+object.isValid(s)
