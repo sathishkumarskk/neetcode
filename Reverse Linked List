@@ -1,0 +1,7 @@
+class Solution(object):
+    def reverseList(self, head):
+        self.n=head
+        print(self.n[::-1])
+head=eval(input("enter :"))
+object=Solution()
+object.reverseList(head)
