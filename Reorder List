@@ -1,0 +1,43 @@
+class Solution(object):
+    def reorderList(self, head):
+        self.n=head
+        self.l=len(self.n)
+        self.list_last=[]
+        self.list_front=[]
+        self.list_output=[]
+        if self.l%2==0:#list last even
+            self.r1=int(self.l/2)
+            for i in range(self.l-1,self.r1-1,-1):
+             self.list_last.append(self.n[i])
+        else:#list last odd
+            self.r1=self.l/2
+            self.r2=int(self.r1+0.5)
+            for j in range(self.l-1,self.r2-2,-1):
+                self.list_last.append(self.n[j])
+        if self.l%2==0:#list first even
+            self.r1=int(self.l/2)
+            for i in range(0,self.r1):
+                self.list_front.append(self.n[i])
+        else:#list first odd
+            self.r1=self.l/2
+            self.r2=int(self.r1+0.5)
+            for j in range(0,self.r2-1):
+                self.list_front.append(self.n[j])
+        self.l3=len(self.list_front)-1
+        self.l4=len(self.list_last)-1
+        for i in range(0,len(self.list_front)):
+            for j in range(0,len(self.list_last)):
+                if i==j:
+                 self.list_output.append(self.list_front[i])
+                 self.list_output.append(self.list_last[j])
+        if len(self.n)%2==0:
+            print(self.list_output)     
+        else:    
+            if len(self.list_front)>len(self.list_last):
+                self.list_output.append(self.list_front[self.l3])
+            else:
+                self.list_output.append(self.list_last[self.l4])
+                print(self.list_output) 
+head=eval(input("enter list: "))
+object=Solution()
+object.reorderList(head)
