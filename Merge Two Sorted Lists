@@ -1,0 +1,35 @@
+class Solution(object):
+    def mergeTwoLists(self, list1, list2):
+        self.n=list1
+        self.p=list2
+        self.list=[]
+        if len(self.n)>len(self.p):
+            for i in range(0,len(self.p)):
+                if self.n[i]>self.p[i]:
+                    self.list.append(self.p[i])
+                    self.list.append(self.n[i])
+                else:
+                    self.list.append(self.n[i])
+                    self.list.append(self.p[i])
+        else:
+            for i in range(0,len(self.n)):
+                if self.n[i]>self.p[i]:
+                    self.list.append(self.p[i])
+                    self.list.append(self.n[i])
+                else:
+                    self.list.append(self.n[i])
+                    self.list.append(self.p[i])
+        if len(self.n)==len(self.p):
+             print(self.list)
+        else:
+            if len(self.n)>len(self.p):
+                for i in range(len(self.p),len(self.n)): 
+                 self.list.append(self.n[i])
+            else:
+                for i in range(len(self.n),len(self.p)): 
+                 self.list.append(self.p[i])
+        print(self.list)         
+list1=eval(input("enter :"))
+list2=eval(input("enter :"))
+object=Solution()
+object.mergeTwoLists(list1,list2)
