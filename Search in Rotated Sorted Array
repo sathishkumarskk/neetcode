@@ -1,0 +1,20 @@
+class Solution(object):
+    def search(self, nums, target):
+        n=nums
+        t=target
+        found=0
+        v=0
+        for i in range(0,len(n)):
+            if n[i]==t:
+                v=i
+                found=i
+                break
+        if found>0:
+            print(found)
+        else:
+            print("-1")
+nums=eval(input("enter : "))
+target=int(input("enter :"))
+ob=Solution()
+ob.search(nums,target)
+        
