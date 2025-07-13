@@ -1,0 +1,10 @@
+n=eval(input("enter "))
+l=[]
+for i in n:
+    for j in range(0,len(i)):
+        l.append(i[j])
+l.sort()        
+print(l)        
+
+
+        
