@@ -5,7 +5,7 @@ class Solution(object):
      for i in range(0,len(self.s)):
         self.l.append(self.s[i])
      self.l1=set(self.l)    
-     print(len(self.l1))
+     print(len(self.l1)-1)
 string=input('enter string :')
 object=Solution()
-object.lengthOfLongestSubstring(string)    
+object.lengthOfLongestSubstring(string)       
