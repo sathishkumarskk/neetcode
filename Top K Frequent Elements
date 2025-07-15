@@ -1,0 +1,38 @@
+n=eval(input("enter :"))
+k=int(input("enter K: "))
+n.sort()
+s=set(n)
+l=list(s)#sorted and remove duplicate
+c=[]
+top=[]
+for i in l:
+    co=n.count(i)
+    c.append(co)
+top=[]
+if len(l)==1:
+    print(l)
+elif len(set(c))==1 and len(l)==2:
+    print(l)    
+else:    
+    for i in c:
+        for j in c:
+            if len(l)>2:
+                maxi=max(c)
+                mini=min(c)
+                if j==maxi:
+                  top.append(l[c.index(maxi)])
+                  l.pop(c.index(maxi))
+                  c.pop(c.index(maxi))
+    maxii=max(c)
+    minii=min(c)
+    if len(set(c))==1:
+        top.append(l[0])
+        top.append(l[1])
+    else:    
+        if len(c)==2:
+            top.append(l[c.index(maxii)])
+            top.append(l[c.index(minii)])
+    print("-------result-------")    
+    for i in range(0,k):
+        pass
+    print(top[0:k])
