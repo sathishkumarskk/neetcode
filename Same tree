@@ -1,0 +1,15 @@
+null,Null,NULL=0,0,0
+l1=eval(input("enter list 1:"))
+l2=eval(input("enter list 2:"))
+for i in l1:
+    if i=="null" or i=="Null" or i=="NULL":
+        l1.pop(l1.pop(l1.index(i)))
+        l1.insert(l1.index(i),0)
+for i in l2:
+    if i=="null" or i=="Null" or i=="NULL":
+        l1.pop(l1.pop(l1.index(i)))
+        l1.insert(l1.index(i),0)        
+if l1==l2:
+    print("true")
+else:
+    print("false")
