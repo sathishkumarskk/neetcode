@@ -1,0 +1,30 @@
+print("YOU WANT TO ENCODE OR DECORE")
+n=int(input("ENCODE PRESS 1   OR   DECODE PRESS 2 :"))
+e=["q","w","e","r","t","y","u","i","o","p","a","s","d","f","g","h","j","k","l","z","x","c","v","b","n","m"]
+d=["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
+if n==1:
+    s=input("ENTER MESSAGE: ")
+    en=[]
+    for i in s:
+      for j in i:
+          for l in d:
+              if j==l:
+                  en.append(e[d.index(l)])
+                  break
+    encode=''.join(en)
+    print(encode)
+elif n==2:
+    s1=input("ENTER MESSAGE: ")
+    de=[]
+    for i in s1:
+      for j in i:
+          for l in d:
+              if j==l:
+                  de.append(d[e.index(l)])
+                  break
+    decode=''.join(de)
+    print(decode)
+else:
+    print("invalid")
+
+    
