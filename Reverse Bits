@@ -1,0 +1,15 @@
+class Solution:
+    def reverseBits(self, n):
+        n=n
+        a=n[::-1]
+        r=a[::-1]
+        sum=0
+        for i in range(0,len(n)):
+            h=int(r[i])
+            p=i
+            e=h*(2**p)
+            sum=sum+e
+        print(sum)  
+n=input("enter ")  
+object=Solution()
+object.reverseBits(n)
