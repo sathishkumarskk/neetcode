@@ -1,0 +1,12 @@
+class Solution:
+    def Remove_Node_From_End_of_Linked_List(self,list):
+        l=list
+        le=len(l)-1
+        n=int(input("enter n:"))
+        for i in range(len(l)-1,le-n,-1):
+            r=l[i]
+        l.remove(r)   
+        print(l)
+list=eval(input("enter list:")) 
+object=Solution()
+object.Remove_Node_From_End_of_Linked_List(list)
