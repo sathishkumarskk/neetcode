@@ -1,0 +1,13 @@
+h=eval(input("enter height:"))
+l=[]
+if len(h)==1:
+    print("No possible container")
+else:    
+    for i in range(0,len(h)):
+        for j in range(0,len(h)):
+            if i!=j:
+                height=min(h[i],h[j])
+                width=abs(i-j)
+                area=height*width
+                l.append(area)
+    print(max(l))            
