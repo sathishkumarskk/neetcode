@@ -1,0 +1,14 @@
+n=eval(input("enter :"))
+t=int(input("target:"))
+l=[]
+for i in range(0,len(n)):
+    for j in range(0,len(n)):
+        if len(l)!=2:
+         if i!=j:
+             if n[i]+n[j]==t:
+                 l.extend([i,j])
+        else:
+            break
+print(l)                 
+                
+           
