@@ -1,10 +1,16 @@
-n=eval(input("enter list :"))
-l=len(n)
-list=[]
-for i in range(0,l):
-    for j in range(l-1,-1,-1):
-        l1=n[j]
-        l2=l1[i]
-        list.append(l2)
-main_list=[list[i:i+l] for i in range(0,len(list),l)]
-print(main_list)
+matrix=eval(input("enter :))
+le=len(matrix[1])
+l=[]
+mat=[]
+for j in range(0,le):
+    v=[i[j] for i in matrix]
+    l.append(v)
+for i in l:
+    i.reverse()
+    mat.append(i)
+print(mat)    
+    
+    
+  
+    
+                         
