@@ -1,3 +1,4 @@
+PYTHON:
 class Solution:
     def maxProfit(self, prices: List[int]) -> int:
         l=prices
@@ -11,4 +12,30 @@ class Solution:
         if len(li)==0:
             return(0)
         else:    
-            return(max(li))   
+            return(max(li))  
+
+JAVA:
+ import java.util.*;
+public class stack{
+    public static void main(String[] argv){
+      int[] l={10,8,7,5,2};
+      ArrayList<Integer> li = new ArrayList<>();
+      for (int i=0;i<l.length;i++){
+          for (int j=0;j<l.length;j++){
+              if (i!=j){
+                  if (i<j && l[i]<l[j]){
+                     int p=Math.abs(l[i]-l[j]); 
+                     li.add(p);
+                  }
+              }
+          }
+      }if (li.size()!=0){
+        int max=Collections.max(li);
+        System.out.println("maximum :"+max);
+      }
+        else{
+            System.out.println(0);
+        }
+
+}
+}
